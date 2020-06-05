@@ -1,0 +1,7 @@
+{
+  "name": "ServiceCar",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
