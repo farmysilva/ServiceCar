@@ -1,0 +1,88 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>Edit Profile</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<app-loading *ngIf="busy"></app-loading>
+
+	<div *ngIf="!busy">
+
+		<input type="file" #fileBtn class="filebtn" (change)="uploadPic($event)" />
+
+		<div>
+			<ion-img class="profile-pic" (click)="updateProfilePic()" src="https://ucarecdn.com/{{ profilePic }}/-/scale_crop/150x150/center/"></ion-img>
+		</div>
+
+
+		<div class="profile-info">
+			<ion-item>
+				<ion-label position="floating">Username</ion-label>
+				<ion-input [(ngModel)]="username"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="floating">New Password?</ion-label>
+				<ion-input [(ngModel)]="newpassword"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="floating">Enter old password</ion-label>
+				<ion-input [(ngModel)]="password"></ion-input>
+			</ion-item>
+
+			<ion-button fill="solid" expand="block" color="dark" (click)="updateDetails()">Save</ion-button>
+		</div>
+
+	</div>
+
+</ion-content>
+
+
+<!-- pagina a modificar 
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit profile</ion-title>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <app-loading *ngIf="busy"></app-loading>
+
+    <section *ngIf="!busy">
+      <ion-list>        
+        <ion-card>
+          <ion-card-header color="primary">        
+            <ion-input type="file" class="fileBtn" (change)="uploadPic($event)"></ion-input>
+            <div>
+              <ion-img slot="end" class="profileimg" (click)="updateProfilePic()" src=""></ion-img>
+            </div>
+          </ion-card-header>
+
+         <!-- alterar restante do layout -- 
+          <ion-item>
+            <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+            <ion-label position="floating">Usernane:</ion-label>
+            <ion-input type="text" [(ngModel)]="username"></ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-icon name="eye-off-outline"slot="start"></ion-icon>
+            <ion-label position="floating">Password:</ion-label>
+            <ion-input type="text" [(ngModel)]="password"></ion-input>
+          </ion-item>
+        
+          <ion-card-content>
+            <ion-button fill="solid" slot="start" (click)="login()">Login</ion-button>
+            <ion-button fill="outline" slot="end" (click)="register()">Register</ion-button>
+          </ion-card-content>
+        </ion-card>
+          
+      </ion-list>
+
+    </section>
+
+</ion-content>
+-->

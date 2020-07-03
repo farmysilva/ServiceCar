@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Use Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>        
+    <ion-card>
+      <ion-card-header color="primary">        
+        <ion-card-title>Login de Usuário</ion-card-title>
+        <ion-card-subtitle>ou registro</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Usernane:</ion-label>
+        <ion-input type="text" [(ngModel)]="username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="eye-off-outline"slot="start"></ion-icon>
+        <ion-label position="floating">Password:</ion-label>
+        <ion-input type="text" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="eye-off-outline"slot="start"></ion-icon>
+        <ion-label position="floating"> Confirm Password:</ion-label>
+        <ion-input type="text" [(ngModel)]="cpassword"></ion-input>
+      </ion-item>
+    
+      <ion-card-content>
+        <ion-button fill="solid" expand="block" (click)="signUp()">Sign Up</ion-button>        
+      </ion-card-content>
+    </ion-card>
+      
+  </ion-list>
+
+</ion-content>
